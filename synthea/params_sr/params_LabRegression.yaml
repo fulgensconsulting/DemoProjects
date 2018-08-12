@@ -1,0 +1,4 @@
+plotDir: 'plots'
+functionSource: 'analyze_sr/setup_LabRegression.R'
+observations: 'output/csv/observations.csv'
+patients: 'output/csv/patients.csv'

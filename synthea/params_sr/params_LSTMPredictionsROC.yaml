@@ -1,0 +1,3 @@
+plotDir: 'plots'
+functionSource: 'analyze_sr/setup_LSTMPredictionsROC.R'
+preds: 'yPredictions.csv'

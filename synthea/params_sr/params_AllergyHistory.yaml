@@ -1,0 +1,4 @@
+allergies: 'output/csv/allergies.csv'
+patients: 'output/csv/patients.csv'
+plotDir: 'plots'
+functionSource: 'analyze_sr/setup_AllergyHistory.R'
