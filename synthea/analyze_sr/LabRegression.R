@@ -48,6 +48,6 @@ if(sys.nframe() == 0){
   CreatininePlot = createLabGroupPlot(CreatininePreds, 'Creatinine (mg/dL)', 'Age', c(0, 4))
 
   LabPlots = plot_grid(LDLPlot, HDLPlot, CreatininePlot, nrow = 3)
-  ggsave(filename = 'LabRegressions.png', path = file.path(params$plotDir), 
+  ggsave(filename = 'LabRegressions.pdf', path = file.path(params$plotDir), 
       width = 6.5, height = 7)
 }

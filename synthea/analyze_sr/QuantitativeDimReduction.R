@@ -51,7 +51,7 @@ if (sys.nframe() == 0){
         outlierSDRemove = 3, conditions, 'Cholesterol Excluded', nPoints = 7500)
     
     combinedPlot = plot_grid(patientPlotNoChol, patientPlotChol, nrow = 2)
-    ggsave(filename = 'LabValueAllPCA.png', plot = combinedPlot, 
+    ggsave(filename = 'LabValueAllPCA.pdf', plot = combinedPlot, 
         path = file.path(params$plotDir), height = 6, width = 8)
 
 }

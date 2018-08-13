@@ -42,7 +42,7 @@ if (sys.nframe() == 0){
     roc = plotROC(plotData, rocAUC)
     pr = plotPR(plotData, prAUC)
     curveCow = plot_grid(roc, pr)
-    ggsave(filename = 'MI_PRROC.png', plot = curveCow, path = file.path(params$plotDir), 
+    ggsave(filename = 'MI_PRROC.pdf', plot = curveCow, path = file.path(params$plotDir), 
         height = 3, width = 6)
 
 }
