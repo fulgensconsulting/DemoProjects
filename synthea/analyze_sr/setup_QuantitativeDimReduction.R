@@ -117,9 +117,9 @@ buildScoresPlot = function(pcaDF, varPC1, varPC2, valsIncludedTitle, nPoints){
         scale_colour_manual(values = colorScale)+
         geom_hline(yintercept = 0, alpha = 0.5)+
         geom_vline(xintercept = 0, alpha = 0.5)+
-        theme(axis.text = element_blank(), axis.title = element_text(size = 7, face = "bold"), 
-            legend.title = element_text(size = 6), legend.text = element_text(size = 6), 
-            title = element_text(size = 6, face = "bold"),
+        theme(axis.text = element_blank(), axis.title = element_text(size = 9, face = "bold"), 
+            legend.title = element_text(size = 7), legend.text = element_text(size = 8), 
+            title = element_text(size = 8, face = "bold"),
             panel.grid.major = element_line(colour = 'grey98'), 
             panel.grid.minor = element_line(colour = 'grey98'),
             legend.box.margin = margin(-10, -10, -10, -10),
@@ -142,11 +142,11 @@ buildLoadingPlot = function(pcaDFObject, valsIncludedTitle){
         ylab(NULL) + 
         xlab(NULL) + 
         ggtitle(paste('Loadings -', valsIncludedTitle))+
-        geom_text_repel(aes(label = Metric), size = 1.75, max.iter = 10000)+
+        geom_text_repel(aes(label = Metric), size = 2.5, max.iter = 10000)+
         geom_hline(yintercept = 0, alpha = 0.5)+
         geom_vline(xintercept = 0, alpha = 0.5)+
         theme(axis.text = element_blank(), 
-            title = element_text(size = 6, face = "bold"),
+            title = element_text(size = 8, face = "bold"),
             panel.grid.major = element_line(colour = 'grey98'), 
             panel.grid.minor = element_line(colour = 'grey98'),
             plot.title = element_text(hjust = 0.5))

@@ -57,10 +57,10 @@ plotSingleAllergyFrequencies = function(df, yearCutoffmin, yearCutoffmax){
     geom_smooth(data = df[(df$YOB > yearCutoffmin & df$YOB < yearCutoffmax & 
         !is.na(df$AllergyFreq)), ],
         method = 'gam', formula = y ~ s(x, k = 4, bs = 'cs'), se = FALSE)+
-    theme(axis.text = element_text(size = 7), 
-            axis.title = element_text(size = 8, face = "bold"), 
-            legend.title = element_text(size = 7, face = 'bold'), 
-            legend.text = element_text(size = 6),
+    theme(axis.text = element_text(size = 8), 
+            axis.title = element_text(size = 9, face = "bold"), 
+            legend.title = element_text(size = 8, face = 'bold'), 
+            legend.text = element_text(size = 7),
             legend.box.margin = margin(-1, -1, -1, -1),
             legend.key = element_rect(size = 2), legend.key.size = unit(1, 'lines'),
             title = element_text(size = 8, face = "bold"), 
@@ -108,7 +108,6 @@ histoAllergyNum = function(df, yearSequence){
 allergyNumPlot = function(df, yearCutoffmin, yearCutoffmax){
     dfGG = melt(df, id.var = 'Year')
     colnames(dfGG) = c('Year', 'AllergyNumber', 'Frequency')
-    #df = df[(!is.na(df$Allergy) & !is.na(df$AllergyFreq))]
     allergyNormGG = ggplot(dfGG, aes(x = Year, y = Frequency, colour = AllergyNumber))+
     theme_bw()+
     xlab('Year of Birth')+
@@ -117,10 +116,10 @@ allergyNumPlot = function(df, yearCutoffmin, yearCutoffmax){
     ggtitle(paste0('Number of unique allergies per person'))+
     geom_smooth(data = dfGG[(dfGG$Year > yearCutoffmin & dfGG$Year < yearCutoffmax), ], 
         se = FALSE)+
-    theme(axis.text = element_text(size = 7), 
-        axis.title = element_text(size = 8, face = "bold"),
-        legend.title = element_text(size = 7, face = 'bold'), 
-        legend.text = element_text(size = 7),
+    theme(axis.text = element_text(size = 8), 
+        axis.title = element_text(size = 9, face = "bold"),
+        legend.title = element_text(size = 8, face = 'bold'), 
+        legend.text = element_text(size = 8),
         legend.box.margin = margin(-1, -1, -1, -1),
         legend.key = element_rect(size = 2), legend.key.size = unit(1, 'lines'),
         title = element_text(size = 8, face = "bold"), 

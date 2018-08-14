@@ -44,5 +44,6 @@ if (sys.nframe() == 0){
     curveCow = plot_grid(roc, pr)
     ggsave(filename = 'MI_PRROC.pdf', plot = curveCow, path = file.path(params$plotDir), 
         height = 3, width = 6)
-
+    ggsave(filename = 'MI_PRROC.jpeg', plot = curveCow, path = file.path(params$plotDir), 
+        height = 3, width = 6, dpi = 600)
 }

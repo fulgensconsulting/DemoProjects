@@ -53,5 +53,7 @@ if (sys.nframe() == 0){
     combinedPlot = plot_grid(patientPlotNoChol, patientPlotChol, nrow = 2)
     ggsave(filename = 'LabValueAllPCA.pdf', plot = combinedPlot, 
         path = file.path(params$plotDir), height = 6, width = 8)
+    ggsave(filename = 'LabValueAllPCA.jpeg', plot = combinedPlot, 
+        path = file.path(params$plotDir), height = 6, width = 8, dpi = 600)
 
 }

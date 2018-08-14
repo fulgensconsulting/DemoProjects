@@ -44,9 +44,11 @@ if (sys.nframe() == 0){
     allergyNumsPlot = allergyNumPlot(allergyNums, 1950, 2005)
 
     outPlot = plot_grid(allergyNumsPlot, singleAllergyPlot, nrow = 2, align = 'v', 
-        rel_heights = c(0.9, 1))
+        rel_heights = c(0.8, 1))
 
-   ggsave(filename = 'AllergyFrequencies.pdf', plot = outPlot, 
+    ggsave(filename = 'AllergyFrequencies.pdf', plot = outPlot, 
         path = file.path(params$plotDir), height = 7, width = 6)
+    ggsave(filename = 'AllergyFrequencies.jpeg', plot = outPlot, 
+        path = file.path(params$plotDir), height = 7, width = 6, dpi = 600)
 
 }
