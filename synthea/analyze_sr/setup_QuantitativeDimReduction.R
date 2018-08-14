@@ -58,6 +58,7 @@ plotPCARmOutliersAdultsBodyCompositionDiabetes = function(patientdata, outlierSD
         conditiondata$DESCRIPTION)])
     patientdata$Condition = 'No history of diabetes'
     patientdata$Condition[(patientdata$ID %in% T2D)] = 'Diabetic'
+    patientdata$Condition[!(patientdata$ID %in% T2D)] = 'Non-diabetic'
     patientdata = patientdata[, colSums(is.na(patientdata)) < nrow(patientTestTrimChol)]
 
     #Adults only
@@ -109,7 +110,7 @@ buildScoresPlot = function(pcaDF, varPC1, varPC2, valsIncludedTitle, nPoints){
     pcaDF = sample_n(pcaDF, nPoints)
 
     scoreGG = ggplot(pcaDF, aes(x = PC1, y = PC2, colour = Age, shape = Condition))+
-        geom_point(size = 0.75)+
+        geom_point(size = 0.9)+
         theme_bw()+
         ylab(sprintf('PC2 (%s%s variance explained)', varPC2, '%')) + 
         xlab(sprintf('PC1 (%s%s variance explained)', varPC1, '%')) + 

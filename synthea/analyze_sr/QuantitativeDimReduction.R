@@ -46,9 +46,9 @@ if (sys.nframe() == 0){
     patientTestTrimNoChol = sortByTestVals(patientTestTrimNoChol)
 
     patientPlotChol = plotPCARmOutliersAdultsBodyCompositionDiabetes(patientTestTrimChol, 
-        outlierSDRemove = 3, conditions, 'Cholesterol Included', nPoints = 7500)
+        outlierSDRemove = 3, conditions, 'Cholesterol Included', nPoints = 5000)
     patientPlotNoChol = plotPCARmOutliersAdultsBodyCompositionDiabetes(patientTestTrimNoChol, 
-        outlierSDRemove = 3, conditions, 'Cholesterol Excluded', nPoints = 7500)
+        outlierSDRemove = 3, conditions, 'Cholesterol Excluded', nPoints = 5000)
     
     combinedPlot = plot_grid(patientPlotNoChol, patientPlotChol, nrow = 2)
     ggsave(filename = 'LabValueAllPCA.pdf', plot = combinedPlot, 

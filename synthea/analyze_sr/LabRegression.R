@@ -50,4 +50,6 @@ if(sys.nframe() == 0){
   LabPlots = plot_grid(LDLPlot, HDLPlot, CreatininePlot, nrow = 3)
   ggsave(filename = 'LabRegressions.pdf', path = file.path(params$plotDir), 
       width = 6.5, height = 7)
+  ggsave(filename = 'LabRegressions.jpeg', path = file.path(params$plotDir), 
+      width = 6.5, height = 7, dpi = 600)
 }
